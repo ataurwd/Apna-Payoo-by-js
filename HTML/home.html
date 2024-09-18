@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex items-center justify-center bg-gray-100">
+        <!-- iPhone 13 Pro Max Mockup -->
+        <div class="relative w-[390px] h-[684px] bg-black rounded-[45px] shadow-lg border-8 border-black">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[210px] h-[30px] bg-black rounded-b-[20px] mt-2"></div>
+          <div class="w-full h-full bg-white rounded-[40px] overflow-hidden pt-14 flex justify-center">
+            <div>
+                <!-- Available Balance -->
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div class="stat-title">Total Page Views</div>
+                      <div class="stat-value">89,400</div>
+                      <div class="stat-desc">21% more than last month</div>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div>
+                    <button class="btn btn-neutral">Add Money</button>
+                    <button class="btn btn-primary">Cash Out</button>
+                </div>
+                <!-- add money form -->
+                <div id="add-money" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5 hidden">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Bank Account Number</span>
+                        </label>
+                        <input type="text" placeholder="email" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Deposit Ammount</span>
+                        </label>
+                        <input type="password" placeholder="password" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                <!-- cash out form -->
+                <div id="cash-out" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Bank Account Number</span>
+                        </label>
+                        <input type="text" placeholder="email" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Cash Out Ammount</span>
+                        </label>
+                        <input type="password" placeholder="password" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
