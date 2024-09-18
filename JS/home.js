@@ -14,10 +14,7 @@ showAndHide('cash-btn', 'cash-out', 'add-money')
 //adjust cashout or add money 
 
 const addMoneyBtn = document.getElementById('add-moneyBtn');
-const cashOutBtn = document.getElementById('cashOut-Btn');
-
 //add money function
-
 addMoneyBtn.addEventListener('click', (e) => {
     e.preventDefault()
     //access all id and conver it number
@@ -36,10 +33,35 @@ addMoneyBtn.addEventListener('click', (e) => {
     else{
         alert('wrong input')
     }
-
-
     //empty the input field
     document.getElementById('addMoney-input').value = ''
     document.getElementById('account-pin').value = ''
+})
+
+// -----------------------------------------
+// --------------------------------------------
+// cash Out system
+
+const cashOutBtn = document.getElementById('cashOut-Btn');
+cashOutBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    //access all id and conver it number
+    let accountBalance = document.getElementById('main-balance').innerText;
+    let accountNumber = document.getElementById('cashOut-input').value;
+    let addMoneyInput = document.getElementById('cashOut-ammount').value;
     
+    //convert input value string to number 
+    let balance = parseFloat(accountBalance)
+    let addAmmount = parseFloat(addMoneyInput)
+
+    if(accountNumber == '1234' && addAmmount >= 500){
+        const newBallance = balance - addAmmount;
+        document.getElementById('main-balance').innerText = newBallance;
+    }
+    else{
+        alert('wrong input')
+    }
+    //empty the input field
+    document.getElementById('addMoney-input').value = ''
+    document.getElementById('account-pin').value = ''
 })

@@ -8,24 +8,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<div class="flex justify-center" style="background-image: linear-gradient(-60deg, #236DBB, #2C94C7);">
-    <div class="mockup-phone" id="main-form">
-        <div class="camera"></div>
-        <div class="display ">
-          <div class="artboard artboard-demo phone-1 bg-white">
+  <div id="main-form" class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="relative w-[390px] h-[684px] bg-black rounded-[45px] shadow-lg border-8 border-black">
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[210px] h-[30px] bg-black rounded-b-[20px] mt-2"></div>
+      <div class="w-full h-full bg-white rounded-[40px] overflow-hidden pt-14 flex flex-col items-center justify-start">
+        <!-- iPhone content container -->
+        <div class="flex flex-col items-center w-full">
             <!-- logo -->
-             <img class="w-1/4" src="./payoo.png" alt="">
+             <img class="w-1/2" src="../payoo.png" alt="">
             <!-- input Form -->
             <div class="flex flex-col space-y-6 max-w-sm mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
                 <!-- Phone Number Field -->
                 <div>
-                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number [56]</label>
                   <input type="text" id="phone-number" name="phone" placeholder="Enter your phone number"
                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
                 </div>
                 <!-- Pin Code Field -->
                 <div>
-                  <label for="pin" class="block text-sm font-medium text-gray-700">Pin Code</label>
+                  <label for="pin" class="block text-sm font-medium text-gray-700">Pin Code [1234]</label>
                   <input type="text" id="pin-code" name="pin" placeholder="Enter your pin code"
                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" autocomplete="off" required>
                 </div>
@@ -36,21 +37,90 @@
                     Submit
                   </button>
                 </div>
-              </div>      
-            </div>
+              </div>  
         </div>
       </div>
-</div>
+    </div>
+  </div>
+
+
 
 
     <!-- phone wallet home page -->
      <!-- ---------------------------->
+<div class="hidden"  id="app-home">
+  <div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <!-- iPhone 13 Pro Max Mockup -->
+    <div class="relative w-[390px] h-[684px] bg-black rounded-[45px] shadow-lg border-8 border-black">
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[210px] h-[30px] bg-black rounded-b-[20px] mt-2"></div>
+      <div class="w-full h-full bg-white rounded-[40px] overflow-hidden pt-14 flex flex-col items-center justify-start">
+        <!-- iPhone content container -->
+        <div class="flex flex-col items-center w-full">
+            <!-- Available Balance Section -->
+            <div class="w-full flex flex-col items-center px-4">
+                <div class="stats shadow w-full">
+                  <div class="stat">
+                    <div class="stat-title">Total Account Balance</div>
+                    <div class="stat-value" id="main-balance">9400</div>
+                    <div class="stat-desc">21% more than last month</div>
+                  </div>
+                </div>
+                <div class="divider w-full"></div>
+                <div class="flex space-x-2">
+                  <button class="btn btn-neutral" id="add-btn">Add Money</button>
+                  <button class="btn btn-primary" id="cash-btn">Cash Out</button>
+                </div>
+            </div>
 
+            <!-- Add Money Form -->
+            <div id="add-money" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5 ">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Account Pin Number</span>
+                    </label>
+                    <input type="password" placeholder="Enter Your Pin" class="input input-bordered" id="account-pin" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Deposit Amount [minimum 500+]</span>
+                    </label>
+                    <input id="addMoney-input" type="text" placeholder="Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="add-moneyBtn" class="btn btn-primary">Add Money</button>
+                  </div>
+                </form>
+              </div>
 
-     <div id="phone-wallet">
-        
-     </div>
+            <!-- Cash Out Form -->
+            <div id="cash-out" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Bank Account Number</span>
+                    </label>
+                    <input type="text" placeholder="Account Number" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Cash Out Amount</span>
+                    </label>
+                    <input type="text" placeholder="Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cashOut-Btn" class="btn btn-secondary">Cash Out</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="../JS/main.js"></script>
+<script src="../JS/home.js"></script>
 
 </body>
 </html>
