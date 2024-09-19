@@ -1,14 +1,9 @@
-function accountBalanceUpdate(balance, pin, ammount){
-    const balance = document.getElementById(balance).innerText;
-    const accountPin = document.getElementById(pin).value;
-    const ammount = document.getElementById(ammount).value;
+//hidden and show section like cash out, add money and transaction
+function showSection(id){
+    document.getElementById('idHere').classList.add('hidden')
+    document.getElementById('idHere').classList.add('hidden')
+    document.getElementById('idHere').classList.add('hidden')
 
-    //string to number
-
-    const balanceNumber = parseFloat(balance);
-    const ammountNumber = parseFloat(ammount);
-
-    if(accountPin === '1234' && ammount >= 500){
-        
-    }
+    //show section
+    document.getElementById(id).classList.remove('hidden')
 }

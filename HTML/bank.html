@@ -8,7 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div id="main-form" class="flex items-center justify-center min-h-screen bg-gray-100">
+  <!-- phone form -->
+  <div id="main-form" class="hidden flex items-center justify-center min-h-screen bg-gray-100">
     <div class="relative w-[390px] h-[684px] bg-black rounded-[45px] shadow-lg border-8 border-black">
       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[210px] h-[30px] bg-black rounded-b-[20px] mt-2"></div>
       <div class="w-full h-full bg-white rounded-[40px] overflow-hidden pt-14 flex flex-col items-center justify-start">
@@ -48,7 +49,7 @@
 
     <!-- phone wallet home page -->
      <!-- ---------------------------->
-<div class="hidden"  id="app-home">
+<div class=""  id="app-home">
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <!-- iPhone 13 Pro Max Mockup -->
     <div class="relative w-[390px] h-[684px] bg-black rounded-[45px] shadow-lg border-8 border-black">
@@ -69,11 +70,12 @@
                 <div class="flex space-x-2">
                   <button class="btn btn-neutral" id="add-btn">Add Money</button>
                   <button class="btn btn-primary" id="cash-btn">Cash Out</button>
+                  <button class="btn btn-accent" id="Transction-btn">Transction</button>
                 </div>
             </div>
 
             <!-- Add Money Form -->
-            <div id="add-money" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5 ">
+            <div id="add-money" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-5 ">
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
@@ -113,6 +115,17 @@
                   </div>
                 </form>
               </div>
+
+              <!-- transction -->
+              <div id="transction-section" class="mt-3">
+                <h1 class="text-2xl font-bold text-red-400">Transction Record</h1>
+                <div id="transction-record">
+                  <!-- <div class="bg-sky-300 p-3 rounded-xl">
+                    <h1 class="text-xl font-bold">Add Money Ammount:</h1>
+                    <h1>New Balance:</h1>
+                  </div> -->
+                </div>
+              </div>
         </div>
       </div>
     </div>
@@ -120,7 +133,7 @@
 </div>
 
 <script src="../JS/main.js"></script>
-<script src="../JS/home.js"></script>
+<!-- <script src="../JS/home.js"></script> -->
 
 </body>
 </html>

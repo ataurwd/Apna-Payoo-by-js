@@ -13,6 +13,12 @@ showAndHide('cash-btn', 'cash-out', 'add-money')
 
 //adjust cashout or add money 
 
+//convert all input value string to number fucntion
+const inputValueConvert = (id) => {
+    const inputValue = document.getElementById(id).value;
+    const converNumber = parseFloat(inputValue);
+    return converNumber;
+}
 const addMoneyBtn = document.getElementById('add-moneyBtn');
 //add money function
 addMoneyBtn.addEventListener('click', (e) => {
